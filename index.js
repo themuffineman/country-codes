@@ -11,7 +11,8 @@ const PORT = 8080
 app.listen(PORT, ()=>{console.log('Server up and running')})
 
 app.get('/csvtojson', async (_, res) =>{
+  console.log('Received Request')
   const csvFilePath ='./countryList.csv'
   const jsonArray = await csv().fromFile(csvFilePath);
   res.json(jsonArray);
-}
+})
