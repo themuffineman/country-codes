@@ -15,13 +15,3 @@ app.get('/csvtojson', async (_, res) =>{
   const jsonArray = await csv().fromFile(csvFilePath);
   res.json(jsonArray);
 }
-        
-// async function returnJSON(){
-//   const csvFilePath ='./countryList.csv'
-//   const jsonArray = await csv().fromFile(csvFilePath);
-//   return jsonArray
-// }
-
-// returnJSON().then((jsonArray)=>{
-//   console.log(jsonArray)
-// })
